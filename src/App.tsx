@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import axios from "axios";
 import { GiphyResponse } from "./types/GiphyResponse";
@@ -10,7 +10,6 @@ function App() {
 	const [images, setImages] = useState<GiphyResponse[]>(testData);
 	const [searchQuery, setSearchQuery] = useState<string>("");
 	const [gridTitle, setGridTitle] = useState<string>("Trending");
-	const loader = useRef<HTMLDivElement>(null);
 	const [isLoading, setIsLoading] = useState<boolean>(false);
 	const [error, setError] = useState<string>();
 	const limit = 9;
@@ -82,7 +81,6 @@ function App() {
 				images={images}
 				isLoading={isLoading}
 				error={error}
-				loader={loader}
 			/>
 		</div>
 	);
