@@ -1,0 +1,6 @@
+.search-wrapper {
+	display: flex;
+	gap: 10;
+	align-items: center;
+	justify-content: space-around;
+}
