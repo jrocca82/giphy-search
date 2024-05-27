@@ -18,6 +18,7 @@ function App() {
 
 	useEffect(() => {
 		const fetchSearchData = async () => {
+			setIsLoading(true);
 			// Search through test images if being rate limited
 			if (images === testData) {
 				const filteredImages = images.filter((item) =>
@@ -37,9 +38,11 @@ function App() {
 				setError(e?.message ?? "Unknown Error, please check logs.");
 				console.error(e);
 			}
+			setIsLoading(false);
 		};
 
 		const fetchTrendingData = async () => {
+			setIsLoading(true);
 			try {
 				const { data } = await axios.get(
 					`https://api.giphy.com/v1/gifs/trending?api_key=${
@@ -53,24 +56,24 @@ function App() {
 				setError(e?.message ?? "Unknown Error, please check logs.");
 				console.error(e);
 			}
+			setIsLoading(false);
 		};
 
 		if (searchQuery && searchQuery !== "") {
-			setIsLoading(true);
 			setGridTitle(`Results for ${searchQuery}`);
 			fetchSearchData();
-			setIsLoading(false);
 		} else {
-			setIsLoading(true);
 			setGridTitle("Trending");
 			fetchTrendingData();
-			setIsLoading(false);
 		}
-	}, [offset, searchQuery]);
+	}, [images, offset, searchQuery]);
 
 	return (
 		<div className="app-wrapper">
-			<h1>Super Cool Gifs</h1>
+			<div className="title-wrapper">
+				<h1>Jo is Super Awesome</h1>
+				<h4>This is her awesome GIF search site</h4>
+			</div>
 			<div className="grid-wrapper">
 				<h2>{gridTitle}</h2>
 				<SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
