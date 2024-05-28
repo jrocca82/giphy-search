@@ -3,10 +3,8 @@ import { GiphyResponse } from "../types/GiphyResponse";
 // Use when rate limited
 export const testData: GiphyResponse[] = [
     {
-        type: "gif",
-        id: "1",
+        id: "IrQcyTog3X8VW",
         title: "Fabulous Monkey",
-        embed_url: "https://giphy.com/embed/IrQcyTog3X8VW",
         images: {
             original: {
                 height: "240",
@@ -15,10 +13,8 @@ export const testData: GiphyResponse[] = [
         }
     },
     {
-        type: "gif",
-        id: "2",
+        id: "vVzH2XY3Y0Ar6",
         title: "Salsa Puppy",
-        embed_url: "https://giphy.com/embed/vVzH2XY3Y0Ar6",
         images: {
             original: {
                 height: "240",
@@ -27,10 +23,8 @@ export const testData: GiphyResponse[] = [
         }
     },
     {
-        type: "gif",
-        id: "3",
+        id: "5dYbT8yNjS23ZLWzhd",
         title: "Good night kitty",
-        embed_url: "https://giphy.com/embed/5dYbT8yNjS23ZLWzhd",
         images: {
             original: {
                 height: "240",
@@ -39,10 +33,8 @@ export const testData: GiphyResponse[] = [
         }
     },
     {
-        type: "gif",
-        id: "4",
+        id: "8H80IVPjAdKY8",
         title: "Dog Tongue",
-        embed_url: "https://giphy.com/embed/8H80IVPjAdKY8",
         images: {
             original: {
                 height: "240",
@@ -51,10 +43,8 @@ export const testData: GiphyResponse[] = [
         }
     },
     {
-        type: "gif",
-        id: "5",
+        id: "YMuI2i1gUSfeNPMu8G",
         title: "Patriot Dogs",
-        embed_url: "https://giphy.com/embed/YMuI2i1gUSfeNPMu8G",
         images: {
             original: {
                 height: "240",
@@ -63,10 +53,8 @@ export const testData: GiphyResponse[] = [
         }
     },
     {
-        type: "gif",
-        id: "6",
+        id: "33zX3zllJBGY8",
         title: "Running Elephant",
-        embed_url: "https://giphy.com/embed/33zX3zllJBGY8",
         images: {
             original: {
                 height: "240",
@@ -75,10 +63,8 @@ export const testData: GiphyResponse[] = [
         }
     },
     {
-        type: "gif",
-        id: "7",
+        id: "FP48G4UKYDPlujQJ3o",
         title: "Selfish Generation",
-        embed_url: "https://giphy.com/embed/FP48G4UKYDPlujQJ3o",
         images: {
             original: {
                 height: "240",
@@ -87,10 +73,8 @@ export const testData: GiphyResponse[] = [
         }
     },
     {
-        type: "gif",
-        id: "8",
+        id: "YCeM7R5yxaFHE1qjqB",
         title: "Buenas noches",
-        embed_url: "https://giphy.com/embed/YCeM7R5yxaFHE1qjqB",
         images: {
             original: {
                 height: "240",
@@ -99,10 +83,8 @@ export const testData: GiphyResponse[] = [
         }
     },
     {
-        type: "gif",
-        id: "9",
+        id: "NWg7M1VlT101W",
         title: "Sleepy Boo",
-        embed_url: "https://giphy.com/embed/NWg7M1VlT101W",
         images: {
             original: {
                 height: "240",

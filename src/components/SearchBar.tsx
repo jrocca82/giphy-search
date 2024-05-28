@@ -1,20 +1,31 @@
-import "./SearchBar.css";
+import { ChangeEvent, useState } from "react";
 
-interface SearchBarProps {
-	searchQuery: string;
-	setSearchQuery: (query: string) => void;
-}
+type SearchBarProps = {
+	onSearch: (query: string) => void;
+};
 
-const SearchBar = ({ searchQuery, setSearchQuery }: SearchBarProps) => (
-	<div className="search-wrapper">
-		<p>Search Images:</p>
-		<input
-			value={searchQuery}
-			onChange={(e) => setSearchQuery(e.target.value)}
-			placeholder="Search for an image"
-			className="search-input"
-		/>
-	</div>
-);
+const SearchBar = ({ onSearch }: SearchBarProps) => {
+	const [inputValue, setInputValue] = useState("");
+
+	const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
+		setInputValue(event.target.value);
+	};
+
+	const handleSearch = () => {
+		onSearch(inputValue);
+	};
+
+	return (
+		<div>
+			<input
+				type="text"
+				value={inputValue}
+				onChange={handleInputChange}
+				placeholder="Search for GIFs"
+			/>
+			<button onClick={handleSearch}>Search</button>
+		</div>
+	);
+};
 
 export default SearchBar;
